@@ -1,0 +1,66 @@
+:root {
+  --gold: #C19A5B;
+  --black: #0A0A0A;
+  --ivory: #E9E4E1;
+  --dark-gray: #2C2C34;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--black);
+  color: var(--ivory);
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 0.04em;
+}
+h1,h2,h3,h4,h5,.logo-wordmark { font-family: 'Cinzel', serif; font-weight: 600; }
+.navbar {
+  position: sticky; top: 0; z-index: 30;
+  display: flex; justify-content: space-between; padding: 1.2rem 3rem;
+  background: rgba(10,10,10,0.82); backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(193,154,91,0.3);
+}
+.navbar nav a {
+  color: var(--ivory); text-decoration: none; margin-left: 2rem; padding-bottom: 0.4rem;
+  border-bottom: 1px solid transparent;
+}
+.navbar nav a:hover { border-color: var(--gold); color: var(--gold); }
+.hero { min-height: 72vh; display: grid; place-items: center; position: relative;
+  background: linear-gradient(160deg,#111 0%,#171717 45%,#262626 100%);
+}
+.hero-overlay { position:absolute; inset:0; background: radial-gradient(circle at center, transparent, rgba(0,0,0,.65)); }
+.hero-content { position: relative; text-align: center; }
+.emblem { color: var(--gold); font-size: 3rem; }
+.hero h1 { font-size: 4rem; margin: .5rem 0; letter-spacing: .25rem; }
+.hero p { color: var(--gold); text-transform: uppercase; }
+.section { padding: 5rem 8vw; }
+.property-grid { display:grid; grid-template-columns: repeat(auto-fit,minmax(240px,1fr)); gap: 2rem; }
+.property-card {
+  border: 1px solid rgba(193,154,91,.65); background: #111; overflow: hidden;
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+.property-card:hover { transform: translateY(-6px); box-shadow: 0 10px 36px rgba(193,154,91,.22); }
+.property-card img { width: 100%; height: 170px; object-fit: cover; }
+.property-card-body { padding: 1rem; display:grid; gap:.45rem; }
+.btn { cursor:pointer; padding:.75rem 1rem; text-transform: uppercase; font-size: .72rem; letter-spacing: .1em; }
+.btn-primary { background: transparent; color: var(--gold); border:1px solid var(--gold); text-decoration:none; text-align:center; }
+.btn-primary:hover { background: var(--gold); color: var(--black); }
+.btn-secondary { background: var(--ivory); color: var(--black); border:0; }
+.btn-secondary:hover { filter: brightness(.95); }
+.footer { padding: 2rem 8vw; text-align:center; background:#080808; }
+.footer .line { height:1px; margin-bottom:1rem; background:linear-gradient(to right,transparent,var(--gold),transparent); }
+.footer-links a { margin: 0 1rem; color: var(--ivory); text-decoration:none; }
+.ai-fab { position: fixed; right: 1.5rem; bottom: 1.5rem; border:1px solid var(--gold); background:#111; color:var(--gold); border-radius:999px; width:60px; height:60px; box-shadow: 0 0 16px rgba(193,154,91,.38); }
+.ai-panel { position: fixed; right: 1.5rem; bottom: 5.8rem; width: 360px; max-height: 75vh; overflow:auto; padding: 1rem; background: rgba(12,12,12,.95); border:1px solid var(--gold); }
+.ai-panel textarea { width:100%; min-height:70px; background:#151515; color:var(--ivory); border:1px solid var(--dark-gray); margin-bottom: .8rem; }
+.typing { color: var(--gold); font-style: italic; }
+.mini-card { display:flex; gap:.6rem; border:1px solid #333; margin:.5rem 0; padding:.4rem; }
+.mini-card img { width:64px; height:64px; object-fit:cover; }
+.suggestions { display:grid; gap:.4rem; }
+.insta-grid { display:grid; grid-template-columns: repeat(4,1fr); gap:1rem; }
+.tile { min-height: 140px; border:1px solid rgba(193,154,91,.5); display:grid; place-items:center; }
+.tile.texture { background:linear-gradient(45deg,#1e1e1e,#2a2a2a); }
+.tile.architecture { background:linear-gradient(45deg,#101010,#323238); }
+.detail-layout { display:grid; grid-template-columns: 1.2fr 1fr; gap: 2rem; }
+.detail-image { width: 100%; min-height: 360px; object-fit: cover; border:1px solid rgba(193,154,91,.6); }
+.insight-cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:1rem; }
+.insight-cards article { border:1px solid rgba(193,154,91,.5); padding:1.2rem; background:#111; }
